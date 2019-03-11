@@ -1,0 +1,26 @@
+<mat-nav>
+    <a
+      mat-list-item
+      routerLinkActive="active-link"
+      routerLink="/nieuwverslag"
+      *ngIf="isAuth"
+      (click)="onClose()"
+    >
+      <mat-icon>description</mat-icon>
+      Nieuw dagverslag
+    </a>
+    <a
+      mat-list-item
+      routerLinkActive="active-link"
+      routerLink="/archief"
+      *ngIf="isAuth"
+      (click)="onClose()"
+    >
+      <mat-icon>library_books</mat-icon>
+      Archief
+    </a>
+    <mat-item *ngIf="isAuth" (click)="onLogout()">
+      <mat-icon>power_settings_new</mat-icon>
+      Afmelden
+    </mat-item>
+  </mat-nav>  
